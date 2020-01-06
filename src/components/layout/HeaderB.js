@@ -7,7 +7,7 @@ function AppHeaderB() {
       <Navbar bg='dark' variant='dark'>
         <Navbar.Brand>User Info</Navbar.Brand>
         <Nav className='mr-auto'>
-          <Nav.Link href='/'>Home</Nav.Link>
+          <Nav.Link href='/react-user'>Home</Nav.Link>
         </Nav>
       </Navbar>
     </div>
