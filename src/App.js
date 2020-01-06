@@ -24,8 +24,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        HEllo
-        {/* <AppHeaderB />
+        <AppHeaderB />
         <Router>
           <Switch>
             <Route
@@ -44,7 +43,7 @@ class App extends Component {
               render={props => <DisplayUserB {...props} />}
             ></Route>
           </Switch>
-        </Router> */}
+        </Router>
       </div>
     );
   }

@@ -31,6 +31,9 @@ class DisplayUserB extends Component {
       )
       .then(res => this.setState({ userData: res.data, dataLoaded: true }));
     // this.setState({ userImage: 'https://source.unsplash.com/random' });
+    // this.setState({
+    //   userImage: `https://joeschmoe.io/api/v1/${this.state.userData.name}`
+    // });
 
     // const { userData: userInfo, company, address } = this.state;
   }
@@ -60,8 +63,8 @@ class DisplayUserB extends Component {
               <Media>
                 {/* <Col xs={6} md={4}> */}
                 <Image
-                  src='https://cdn3.iconfinder.com/data/icons/miniman-vol-1/65/_Cool_Tough_Guy-512.png'
-                  // src={this.state.userImage} || 'https://cdn3.iconfinder.com/data/icons/miniman-vol-1/65/_Cool_Tough_Guy-512.png'
+                  // src='https://cdn3.iconfinder.com/data/icons/miniman-vol-1/65/_Cool_Tough_Guy-512.png'
+                  src={`https://joeschmoe.io/api/v1/${this.state.userData.name}`}
                   roundedCircle
                   width={100}
                   height={100}
