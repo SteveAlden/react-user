@@ -29,7 +29,7 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path='/'
+              path='/react-user'
               render={props => (
                 <React.Fragment>
                   <Container>
