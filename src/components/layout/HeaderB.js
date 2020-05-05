@@ -9,7 +9,7 @@ function AppHeaderB() {
         fixed='top'
         style={{
           backdropFilter: 'blur(10px)  contrast(140%)',
-          backgroundColor: 'rgba(255,255,255,0.7)'
+          backgroundColor: 'rgba(255,255,255,0.7)',
           // marginBottom: '100px'
         }}
         variant='light'
@@ -17,7 +17,7 @@ function AppHeaderB() {
       >
         <Navbar.Brand>User Info</Navbar.Brand>
         <Nav className='mr-auto'>
-          <Nav.Link href='/react-user'>Home</Nav.Link>
+          <Nav.Link href='/'>Home</Nav.Link>
         </Nav>
       </Navbar>
     </div>

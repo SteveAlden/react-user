@@ -12,13 +12,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   state = {
-    users: []
+    users: [],
   };
 
   componentDidMount() {
     axios
       .get('https://jsonplaceholder.typicode.com/users')
-      .then(res => this.setState({ users: res.data }));
+      .then((res) => this.setState({ users: res.data }));
   }
 
   render() {
@@ -29,8 +29,8 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path='/react-user'
-              render={props => (
+              path='/'
+              render={(props) => (
                 <React.Fragment>
                   <Container style={{ paddingTop: '60px' }}>
                     <UserList users={this.state.users} />
@@ -40,7 +40,7 @@ class App extends Component {
             />
             <Route
               path={`/user/:id`}
-              render={props => <DisplayUserB {...props} />}
+              render={(props) => <DisplayUserB {...props} />}
             ></Route>
           </Switch>
         </Router>
