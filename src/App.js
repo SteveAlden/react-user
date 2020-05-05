@@ -29,7 +29,7 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path='/'
+              path='/home'
               render={(props) => (
                 <React.Fragment>
                   <Container style={{ paddingTop: '60px' }}>
