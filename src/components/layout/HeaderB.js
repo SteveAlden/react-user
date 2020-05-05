@@ -17,7 +17,7 @@ function AppHeaderB() {
       >
         <Navbar.Brand>User Info</Navbar.Brand>
         <Nav className='mr-auto'>
-          <Nav.Link href='/home'>Home</Nav.Link>
+          <Nav.Link href='/'>Home</Nav.Link>
         </Nav>
       </Navbar>
     </div>
