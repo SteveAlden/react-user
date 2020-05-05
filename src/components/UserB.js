@@ -15,31 +15,37 @@ import Card from 'react-bootstrap/Card';
 class UserB extends Component {
   state = {
     hoverClassName: 'shadow-none',
-    hoverCardBg: 'light',
-    hoverCardText: ''
+    hoverCardBg: 'rgba(255, 255, 255, 0.3)',
+    // hoverCardBg: 'light',
+    hoverCardText: 'white',
+    hoverFont: '16px'
   };
 
   // toggleRaised = () => this.setState({raised:!this.state.raised});
 
   onMouseOver = () => {
     this.setState({
-      hoverClassName: 'shadow-lg',
-      hoverCardBg: 'secondary',
-      hoverCardText: 'white'
+      hoverClassName: 'shadow-lg pl-2',
+      hoverCardBg: 'rgba(255, 255, 255, 0.5)',
+      // hoverCardBg: 'secondary',
+      hoverCardText: 'dark',
+      hoverFont: '18px'
     });
   };
   onMouseOut = () => {
     this.setState({
       hoverClassName: 'shadow-none',
-      hoverCardBg: 'light',
-      hoverCardText: ''
+      hoverCardBg: 'rgba(255, 255, 255, 0.3)',
+      // hoverCardBg: 'light',
+      hoverCardText: 'white',
+      hoverFont: '16px'
     });
   };
   onMouseClick = () => {
     this.setState({
       hoverClassName: 'shadow-none',
       hoverCardBg: 'dark',
-      hoverCardText: 'whitw'
+      hoverCardText: 'white'
     });
   };
 
@@ -51,23 +57,35 @@ class UserB extends Component {
         to={`/user/${this.props.user.id}`}
       >
         <Card
-          bg={this.state.hoverCardBg}
+          // bg={this.state.hoverCardBg}
           text={this.state.hoverCardText}
           onMouseOver={this.onMouseOver}
           onMouseOut={this.onMouseOut}
-          // raised={this.toggleRaised}
           className={this.state.hoverClassName}
           style={{
-            margin: '20px 2px 20px 2px'
+            margin: '20px 2px 20px 2px',
+            backdropFilter: 'blur(10px)',
+            backgroundColor: this.state.hoverCardBg
           }}
-          // onClick={this.onMouseClick}
         >
-          {/* <Button variant='outline-light'> */}
           <Card.Body>
-            <Card.Text>{name}</Card.Text>
+            <Card.Text
+            // style={{ fontSize: this.state.hoverFont }}
+            >
+              {name}
+            </Card.Text>
           </Card.Body>
-          {/* </Button> */}
         </Card>
+        {/* <div
+          class='shadow-sm p-3  rounded'
+          style={{
+            marginTop: '20px',
+            backdropFilter: 'blur(10px)',
+            backgroundColor: 'rgba(255, 255, 255, 0.4)'
+          }}
+        >
+          {name}
+        </div> */}
       </Link>
 
       // </Link>

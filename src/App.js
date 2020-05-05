@@ -32,7 +32,7 @@ class App extends Component {
               path='/react-user'
               render={props => (
                 <React.Fragment>
-                  <Container>
+                  <Container style={{ paddingTop: '60px' }}>
                     <UserList users={this.state.users} />
                   </Container>
                 </React.Fragment>
